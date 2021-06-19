@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #000;
+   /* height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;*/
+}
+.registerbody{
+
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.content{
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 30px;
+}
+.navbar{
+  width: 100%;
+  z-index: 2;
+  padding: 25px 0;
+  transition: all 0.3s ease;
+}
+.navbar.sticky{
+  background: #1b1b1b;
+  padding: 10px 0;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+.navbar .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a{
+  color: #fff;
+  font-size: 50px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navbar .member-info{
+  display:inline-block;
+}
+
+.member-info li{
+  list-style: none;
+}
+.member-info li {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+
+.banner .menu_item{
+    display: flex;
+    padding: 20px;
+    margin-top: 50px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+
+
+}
+
+
+.banner .menu_item li a{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 100px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.container-fb{
+
+  margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.formbox{
+    background: #161b22;
+    height: 450px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 16px;
+}
+
+
+.titles{
+    text-align: center;
+    font-weight: 500;
+    font-size: 50px;
+    color: white;
+    position: relative;
+    top: 10px;
+}
+
+
+.input-field{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 40px;
+}
+
+.lbl{
+    margin-left: 6%;
+    margin-bottom: 1px;
+    color: lightgray;
+    font-size: 14px;
+}
+
+.user-input{
+    color: black;
+    background: transparent;
+    border: 1px solid #0D1117;
+    background: white;
+    padding: 15px;
+    width: 350px;
+    height: 40px;
+    font-size: 16px;
+    outline: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.user-input:focus{
+    border-color: white;
+    box-shadow: 0 0 5px 0 white;
+    transition: .3s;
+}
+
+.sbmbtn{
+    color: black;
+    background: white;
+    width: 350px;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 6%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    top: 175px;
+    font-size: 20px;
+}
+.sbmbtn:hover{
+    background: #000000;
+    color: white;
+    transition: .3s;
+}
+
+.text{
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 185px;
+}
+
+.link{
+    color: red;
+}
+
+@media screen and (max-width: 500px)
+{
+    .container-fb{
+        top: 125px;
+    }
+
+    .formbox, .user-input, .sbmbtn{
+        width: 85%;
+    }
+   
+}
+
+
+/***********Reservation Style*****************/
+
+.container{
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.reservation_body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-top: 80px;
+}
+
+.title{
+  color: black;
+  position: relative;
+  top: 10px;
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+/*
+form .user-details .input-request{
+  margin-bottom: 15px;
+  width: calc(100% / - 20px);
+}
+*/
+
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+ form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   background: #000;
+   border-color: #d9d9d9;
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+ .container button{
+   height: 45px;
+   margin: 35px 0
+ }
+ 
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+
+  
+@media (max-width: 900px) {
+
+.banner .menu_item{
+  padding: 1px;
+  margin-top: 5px;
+}
+
+.banner .menu_item li a{
+  margin-left: 1px;
+  font-weight: 500;
+  font-size: 10px;
+  }
+}
+
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}
+
+.regsend{
+  color: white;
+  background: black;
+  height: 100%;
+  width: 100%;
+  border-radius: 1px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+}

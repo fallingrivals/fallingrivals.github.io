@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WTEPH</title>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="content">
+            <div class="logo">
+                <a href="#">Room 18</a>
+            </div>
+            <ul class="member-info">
+                <li>
+                    <p>Name:</p>
+                </li>
+                <li>
+                    <p>Member Number:</p>
+                </li>
+                <li>
+                    <p>Valid Until:</p>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <section class="banner">
+        <div class="menu_item">
+            <li><a href="home_page.html">Events</a></li>
+            <li><a href="Reservation.html">Reservation</a></li>
+            <li><a href="View_Reserve.html">My Reservation</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+        </div>
+    </section>
+
+
+
+    <div class="reservation_body">
+    <div class="container">
+        <div class="title">Room 18 Reservation</div>
+        <div class="content">
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" id="fullname" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Member ID</span>
+                        <input type="text" id="address" placeholder="Enter your ID" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="text" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Phone Number</span>
+                        <input type="text" id="phonenumber" placeholder="Enter your number" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="party">Enter a date and time for your booking:</label>
+                        <input id="party" type="datetime-local" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="cars">How many person:</label>
+                        <select name="person" id="person">
+                            <option value="volvo">1</option>
+                            <option value="saab">2</option>
+                            <option value="opel">3</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">1st Person Name </span>
+                        <input type="text" id="position" placeholder="Enter the person name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">2n Person Name</span>
+                        <input type="text" id="yrlyincome" placeholder="Enter the person name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">3rd Person Name</span>
+                        <input type="text" id="hubby" placeholder="Enter the person name" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Speacial Request</span>
+                        <input type="text" id="hubby" placeholder="Enter your request" required>
+                    </div>
+                </div>
+                <button class="regsend" onclick="writeData()" id="send">Send</button>
+
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

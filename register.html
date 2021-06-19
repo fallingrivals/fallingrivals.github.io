@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WTEPH</title>
+  <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+
+</head>
+
+<body>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAFQYdy_1LgeYKim9Hb4NLwsfIgA3CRHxQ",
+      authDomain: "wteph-c7c7c.firebaseapp.com",
+      projectId: "wteph-c7c7c",
+      storageBucket: "wteph-c7c7c.appspot.com",
+      messagingSenderId: "725196375490",
+      appId: "1:725196375490:web:d0b80175690610e991025b"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+
+    function writeData() {
+      firebase.database().ref("USER").push({
+        fullname: document.getElementById("fullname").value,
+        address: document.getElementById("address").value,
+        email: document.getElementById("email").value,
+        phonenumber: document.getElementById("phonenumber").value,
+        company: document.getElementById("company").value,
+        occupation: document.getElementById("occupation").value,
+        position: document.getElementById("position").value,
+        yrlyincome: document.getElementById("yrlyincome").value,
+        hubby: document.getElementById("hubby").value
+
+      });
+    }
+
+  </script>
+
+  <div class="registerbody">
+    <div class="container">
+      <div class="title">Room 18 Registration</div>
+      <div class="content">
+        <form action="#">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Full Name</span>
+              <input type="text" id="fullname" placeholder="Enter your name" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Address</span>
+              <input type="text" id="address" placeholder="Enter your address" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input type="text" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Phone Number</span>
+              <input type="text" id="phonenumber" placeholder="Enter your number" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Company Name</span>
+              <input type="text" id="company" placeholder="Enter your Company name" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Occupation</span>
+              <input type="text" id="occupation" placeholder="Enter your occupation" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Position</span>
+              <input type="text" id="position" placeholder="Enter your position" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Yearly Income</span>
+              <input type="text" id="yrlyincome" placeholder="Enter your yearly income" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Hubby</span>
+              <input type="text" id="hubby" placeholder="Enter your hubbys" required>
+            </div>
+          </div>
+          <div class="gender-details">
+            <input type="radio" name="gender" id="dot-1">
+            <input type="radio" name="gender" id="dot-2">
+            <input type="radio" name="gender" id="dot-3">
+            <span class="gender-title">Gender</span>
+            <div class="category">
+              <label for="dot-1">
+                <span class="dot one"></span>
+                <span class="gender">Male</span>
+              </label>
+              <label for="dot-2">
+                <span class="dot two"></span>
+                <span class="gender">Female</span>
+              </label>
+              <label for="dot-3">
+                <span class="dot three"></span>
+                <span class="gender">Prefer not to say</span>
+              </label>
+            </div>
+          </div>
+          <button class="regsend" onclick="writeData()" id="send">Send</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
